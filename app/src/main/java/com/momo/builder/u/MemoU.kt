@@ -3,6 +3,8 @@ package com.momo.builder.u
 import com.momo.builder.bean.MemoBean
 import org.json.JSONArray
 import org.json.JSONObject
+import java.text.SimpleDateFormat
+import java.util.Date
 import java.util.Locale
 
 object MemoU {
@@ -14,15 +16,16 @@ object MemoU {
             val jsonArray = JSONArray(MmkvU.getStr("memo"))
             for (index in 0 until jsonArray.length()) {
                 val jsonObject = JSONObject(jsonArray.getString(index))
-                list.add(
-                    MemoBean(
-                        jsonObject.optString("title"),
-                        jsonObject.optString("htmlContent"),
-                        jsonObject.optString("content"),
-                        jsonObject.optString("labelColor"),
-                        jsonObject.optLong("time"),
-                    )
+                val memo = MemoBean(
+                    jsonObject.optString("title"),
+                    jsonObject.optString("htmlContent"),
+                    jsonObject.optString("content"),
+                    jsonObject.optString("labelColor"),
+                    jsonObject.optLong("time"),
+                    jsonObject.optInt("type")
                 )
+                memo.isDone = jsonObject.optBoolean("isDone")
+                list.add(memo)
             }
         }
         firstInitTwoMemo()
@@ -32,18 +35,21 @@ object MemoU {
         title: String,
         htmlContent: String,
         content: String,
-        labelColor: String
+        labelColor: String,
+        type: Int
     ) {
         val clickIndex = getClickIndex()
         if (clickIndex >= 0) {
             val bean = list[clickIndex]
-            bean.title=title
+            bean.title = title
             bean.htmlContent = htmlContent
             bean.content = content
             bean.labelColor = labelColor
+            bean.type = type
         } else {
             val memoBean =
-                MemoBean(title, htmlContent, content, labelColor, System.currentTimeMillis())
+                MemoBean(title, htmlContent, content, labelColor, System.currentTimeMillis(), type)
+            memoBean.isNewCreate = true
             list.add(memoBean)
             clickMemo = memoBean
         }
@@ -102,32 +108,35 @@ object MemoU {
         //"<html><body><p><span style=\"color:#575757;\">yggg</span></p></body></html>"
         list.add(
             MemoBean(
-                title = "1. Welcome to Easy Memo.",
-                htmlContent = "<html><body><p><span style=\"color:#575757;\">This is a sample note to help you get started with our service.</span></p></body></html>",
-                content = "This is a sample note to help you get started with our service.",
+                title = "1. Work List",
+                htmlContent = "<html><body><p><span style=\"color:#FFFFFF;\">Today ${obtainDate()}. Click the button on the right to finish.</span></p></body></html>",
+                content = "Today ${obtainDate()}. Click the button on the right to finish.",
                 labelColor = "#F36E9D",
-                time = System.currentTimeMillis()
+                time = System.currentTimeMillis() + 100, type = 1
             )
         )
         list.add(
             MemoBean(
-                title = "2. How to create a new note?",
-                htmlContent = "<html><body><p><span style=\"color:#575757;\">Tap the \"➕\" button below, enter your information, and click \"✔️\" to save.</span></p></body></html>",
-                content = "Tap the \"➕\" button below, enter your information, and click \"✔\uFE0F\" to save.",
-                labelColor = "#F36E9D",
-                time = System.currentTimeMillis()
+                title = "2. User tutorial",
+                htmlContent = "<html><body><p><span style=\"color:#333333;\">Click in to change colors, record your life, and manage your to-do list</span></p></body></html>",
+                content = "Click in to change colors, record your life, and manage your to-do list",
+                labelColor = "#F3EDEF",
+                time = System.currentTimeMillis() + 200, type = 1
             )
         )
         list.add(
             MemoBean(
-                title = "3. How to edit an existing note?",
-                htmlContent = "<html><body><p><span style=\"color:#575757;\">Simply tap on a note to view/edit its content.</span></p></body></html>",
-                content = "Simply tap on a note to view/edit its content.",
-                labelColor = "#F36E9D",
-                time = System.currentTimeMillis()
+                title = "3. Welcome to Easy Memo",
+                htmlContent = "<html><body><p><span style=\"color:#333333;\">This is an example text.You can delete it by clicking in it.</span></p></body></html>",
+                content = "This is an example text.You can delete it by clicking in it.",
+                labelColor = "#E6F2FF",
+                time = System.currentTimeMillis() + 300, type = 0
             )
         )
         MmkvU.saveStr("first", "1")
         saveList()
     }
+
+    fun obtainDate(): String =
+        SimpleDateFormat("yyyy-MM-dd", Locale.getDefault()).format(Date())
 }

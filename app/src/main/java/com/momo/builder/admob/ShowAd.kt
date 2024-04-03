@@ -15,7 +15,6 @@ import com.google.android.gms.ads.nativead.NativeAdView
 import com.momo.builder.R
 import com.momo.builder.baseactivity.BaseActivity
 import com.momo.builder.bean.ResultBean
-import com.momo.builder.conf.LocalConf.ad
 import com.momo.builder.memoApp
 import com.momo.builder.u.EventReportU
 import com.momo.builder.u.logMemo

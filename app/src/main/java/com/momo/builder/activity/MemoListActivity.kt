@@ -3,9 +3,6 @@ package com.momo.builder.activity
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
-import android.text.Editable
-import android.text.TextWatcher
-import android.util.Log
 import android.view.View
 import android.view.View.OnFocusChangeListener
 import androidx.activity.result.contract.ActivityResultContracts
@@ -19,7 +16,9 @@ import com.momo.builder.admob.ShowAd
 import com.momo.builder.baseactivity.BaseViewBinding
 import com.momo.builder.bean.MemoBean
 import com.momo.builder.databinding.ActivityMemoListBinding
+import com.momo.builder.dialog.BottomAppraiseDialog
 import com.momo.builder.memoApp
+import com.momo.builder.u.Constant
 import com.momo.builder.u.EventReportU
 import com.momo.builder.u.MemoU
 import com.momo.builder.u.MmkvU
@@ -49,6 +48,22 @@ class MemoListActivity : BaseViewBinding<ActivityMemoListBinding>() {
             }
         }
         EventReportU.reportCustomEvent(EventReportU.home_show)
+        initTodoCount()
+    }
+
+    private fun initTodoCount() {
+        var todoCount = 0
+        for (memo in MemoU.list) {
+            if (memo.type == 1 && !memo.isDone) {
+                todoCount++
+            }
+        }
+        if (todoCount > 0) {
+            binding.layoutContent.tvTodoCount.text = todoCount.toString()
+            binding.layoutContent.tvTodoCount.visibility = View.VISIBLE
+        } else {
+            binding.layoutContent.tvTodoCount.visibility = View.GONE
+        }
     }
 
     override fun setClickListener() {
@@ -76,22 +91,40 @@ class MemoListActivity : BaseViewBinding<ActivityMemoListBinding>() {
         }
         binding.layoutMenu.llcPrivacy.setOnClickListener {
             EventReportU.reportCustomEvent(EventReportU.set_privacy)
-            startActivity(Intent(Intent.ACTION_VIEW, Uri.parse("https://www.baidu.com")).apply {
+            startActivity(Intent(Intent.ACTION_VIEW, Uri.parse(Constant.URL)).apply {
                 addCategory(Intent.CATEGORY_BROWSABLE)
             })
         }
     }
 
     private fun setAdapter() {
-        memoListAdapter = MemoListAdapter(this) {
+        val memoAdapter = MemoListAdapter(this) {
             if (!binding.drawer.isOpen) {
                 EventReportU.reportCustomEvent(EventReportU.home_note)
                 toEdit(it)
             }
         }
+        memoAdapter.updateTodoCount = {
+            initTodoCount()
+        }
+        memoListAdapter = memoAdapter
         binding.layoutContent.rvMemo.apply {
             layoutManager = LinearLayoutManager(this@MemoListActivity)
             adapter = memoListAdapter
+        }
+    }
+
+    private fun appraisePage() {
+        if (MmkvU.getBoolean(MmkvU.IS_APPRAISE)) return
+        var createMemoCount = 0
+        for (memo in MemoU.list) {
+            if (memo.isNewCreate)
+                createMemoCount++
+        }
+        if (createMemoCount >= 5) {
+            val dialog = BottomAppraiseDialog()
+            dialog.show(supportFragmentManager, "appraise")
+            MmkvU.saveBoolean(MmkvU.IS_APPRAISE, true)
         }
     }
 
@@ -104,6 +137,8 @@ class MemoListActivity : BaseViewBinding<ActivityMemoListBinding>() {
         registerForActivityResult(ActivityResultContracts.StartActivityForResult()) {
             if (it.resultCode == 100) {
                 memoListAdapter.setList(MemoU.list)
+                initTodoCount()
+                appraisePage()
             }
         }
 

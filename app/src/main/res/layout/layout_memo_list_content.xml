@@ -3,6 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
     android:focusable="true"
     android:focusableInTouchMode="true">
 
@@ -17,15 +18,16 @@
         android:layout_width="32dp"
         android:layout_height="32dp"
         android:layout_marginTop="12dp"
-        android:layout_marginRight="24dp"
+        android:layout_marginEnd="24dp"
         android:src="@drawable/icon_set"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@id/status_view" />
 
     <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_app_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="24dp"
+        android:layout_marginStart="24dp"
         android:text="Easy Memo"
         android:textColor="#1C259C"
         android:textSize="22sp"
@@ -33,6 +35,24 @@
         app:layout_constraintBottom_toBottomOf="@id/icon_set"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="@id/icon_set" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_todo_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:background="@drawable/shape_round10"
+        android:gravity="center"
+        android:paddingStart="8dp"
+        android:paddingTop="2dp"
+        android:paddingEnd="8dp"
+        android:paddingBottom="2dp"
+        android:textColor="@color/white"
+        android:textSize="12sp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_app_name"
+        app:layout_constraintStart_toEndOf="@+id/tv_app_name"
+        app:layout_constraintTop_toTopOf="@+id/tv_app_name" />
 
     <View
         android:id="@+id/search_view"
@@ -46,13 +66,13 @@
         android:id="@+id/icon_search"
         android:layout_width="28dp"
         android:layout_height="28dp"
-        android:layout_marginLeft="20dp"
+        android:layout_marginStart="20dp"
         android:src="@drawable/icon_search"
         app:layout_constraintBottom_toBottomOf="@id/search_view"
         app:layout_constraintLeft_toLeftOf="@id/search_view"
         app:layout_constraintTop_toTopOf="@id/search_view" />
 
-    <EditText
+    <androidx.appcompat.widget.AppCompatEditText
         android:id="@+id/edit_search"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -74,14 +94,15 @@
         android:layout_height="0dp"
         android:layout_marginTop="5dp"
         android:layout_marginBottom="10dp"
-        app:layout_constraintBottom_toTopOf="@+id/bottom"
+        app:layout_constraintBottom_toTopOf="@+id/icon_add"
         app:layout_constraintTop_toBottomOf="@id/search_view" />
 
     <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/icon_add"
         android:layout_width="64dp"
         android:layout_height="64dp"
-        android:layout_margin="26dp"
+        android:layout_marginEnd="26dp"
+        android:layout_marginBottom="10dp"
         android:src="@drawable/icon_add"
         app:layout_constraintBottom_toTopOf="@+id/bottom"
         app:layout_constraintRight_toRightOf="parent" />

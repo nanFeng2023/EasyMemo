@@ -18,8 +18,8 @@ android {
         applicationId "com.momo.builder"
         minSdk 24
         targetSdk 33
-        versionCode 3
-        versionName "1.0.2"
+        versionCode 4
+        versionName "1.0.3"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -69,4 +69,10 @@ dependencies {
 
     implementation 'com.lzy.net:okgo:3.0.4'
     implementation("com.google.android.ump:user-messaging-platform:2.2.0")
+
+    // This dependency is downloaded from the Google’s Maven repository.
+    // So, make sure you also include that repository in your project's build.gradle file.
+    implementation("com.google.android.play:review:2.0.1")
+    // For Kotlin users also import the Kotlin extensions library for Play In-App Review:
+    implementation("com.google.android.play:review-ktx:2.0.1")
 }

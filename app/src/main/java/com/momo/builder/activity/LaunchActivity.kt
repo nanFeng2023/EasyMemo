@@ -53,7 +53,7 @@ class LaunchActivity : BaseViewBinding<ActivityLaunchBinding>() {
 
     private fun initAnimator() {
         valueAnimator = ValueAnimator.ofInt(1, 100).apply {
-            duration = 10000L
+            duration = 6000L
             interpolator = LinearInterpolator()
             addUpdateListener {
                 val pro = it.animatedValue as Int

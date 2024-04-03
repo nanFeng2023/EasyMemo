@@ -16,6 +16,8 @@ object MmkvU {
     const val FIRST_INSTALL = "first_install"
     const val GAID = "gaid"
 
+    const val IS_APPRAISE = "isAppraise"
+
     fun saveStr(key: String, value: String) {
         MMKV.defaultMMKV().encode(key, value)
     }

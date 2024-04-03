@@ -10,22 +10,23 @@ import com.momo.builder.databinding.ItemColorBinding
 import com.momo.builder.u.show
 
 class ColorAdapter(
-    private val ctx:Context,
-    private val chooseLabel:Boolean,
-    private val choosedColor:String,
-    private val clickColor:(color:String)->Unit
-):Adapter<ColorAdapter.ColorView>() {
-    private val colorList= arrayListOf<String>()
+    private val ctx: Context,
+    chooseLabel: Boolean,
+    private val choosedColor: String,
+    private val clickColor: (color: String) -> Unit
+) : Adapter<ColorAdapter.ColorView>() {
+    private val colorList = arrayListOf<String>()
 
     init {
-        if (chooseLabel){
+        colorList.clear()
+        if (chooseLabel) {
             colorList.add("#F36E9D")
             colorList.add("#F3EDEF")
             colorList.add("#E6F2FF")
             colorList.add("#F1EFFF")
             colorList.add("#F8FFE6")
             colorList.add("#FFF2E6")
-        }else{
+        } else {
             colorList.add("#575757")
             colorList.add("#E20E0E")
             colorList.add("#F7B21A")
@@ -35,9 +36,10 @@ class ColorAdapter(
         }
     }
 
-    inner class ColorView(view:ItemColorBinding):ViewHolder(view.root){
-        val ivColor=view.ivColor
-        val ivSel=view.iconSel
+    inner class ColorView(view: ItemColorBinding) : ViewHolder(view.root) {
+        val ivColor = view.ivColor
+        val ivSel = view.iconSel
+
         init {
             view.root.setOnClickListener {
                 clickColor.invoke(colorList[layoutPosition])
@@ -46,14 +48,14 @@ class ColorAdapter(
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ColorView {
-        return ColorView(ItemColorBinding.inflate(LayoutInflater.from(ctx),parent,false))
+        return ColorView(ItemColorBinding.inflate(LayoutInflater.from(ctx), parent, false))
     }
 
     override fun getItemCount(): Int = colorList.size
 
     override fun onBindViewHolder(holder: ColorView, position: Int) {
         val color = colorList[position]
-        holder.ivSel.show(color==choosedColor)
+        holder.ivSel.show(color == choosedColor)
         holder.ivColor.setBackgroundColor(Color.parseColor(color))
     }
 }

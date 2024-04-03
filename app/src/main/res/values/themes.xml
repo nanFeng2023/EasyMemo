@@ -1,8 +1,10 @@
-<resources xmlns:tools="http://schemas.android.com/tools">
-    <!-- Base application theme. -->
-    <style name="Theme.Memo" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+<resources>
+
+    <style name="Theme.Memo" parent="Theme.MaterialComponents.Light.NoActionBar">
         <item name="android:statusBarColor">@android:color/transparent</item>
         <item name="android:windowLightStatusBar">true</item>
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+        <item name="android:windowTranslucentNavigation">true</item>
     </style>
 
     <style name="BaseDialog" parent="AlertDialog.AppCompat">
@@ -10,5 +12,13 @@
         <item name="android:backgroundDimEnabled">true</item>
         <item name="android:windowNoTitle">true</item>
         <item name="android:windowIsFloating">false</item>
+    </style>
+
+    <style name="CusBottomDialogTheme" parent="Theme.Material3.Light.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/CusBottomDialogStyle</item>
+    </style>
+
+    <style name="CusBottomDialogStyle" parent="Widget.Material3.BottomSheet.Modal">
+        <item name="background">@android:color/transparent</item>
     </style>
 </resources>
