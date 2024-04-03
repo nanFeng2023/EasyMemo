@@ -76,7 +76,7 @@ class MemoListActivity : BaseViewBinding<ActivityMemoListBinding>() {
         }
         binding.layoutMenu.llcPrivacy.setOnClickListener {
             EventReportU.reportCustomEvent(EventReportU.set_privacy)
-            startActivity(Intent(Intent.ACTION_VIEW, Uri.parse("https://www.baidu.com")).apply {
+            startActivity(Intent(Intent.ACTION_VIEW, Uri.parse("https://sites.google.com/view/easymemo/home")).apply {
                 addCategory(Intent.CATEGORY_BROWSABLE)
             })
         }

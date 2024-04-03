@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "101436322072",
+    "project_id": "easy-memo-87522",
+    "storage_bucket": "easy-memo-87522.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:101436322072:android:4898efeba81cc20d16ee6d",
+        "android_client_info": {
+          "package_name": "com.easymemo.convenient.app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC135HDV8g1z0wt5u0oRgYJAP1IPOKWiz0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
