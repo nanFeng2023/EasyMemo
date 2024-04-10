@@ -49,7 +49,11 @@ object EventReportU {
     val open_ad_impression = "open_ad_impression"
     val home_ad_impression = "home_ad_impression"
     val inter_ad_impression = "inter_ad_impression"
-
+    val home_tab_click = "home_tab_click"
+    val text_notification = "text_notification"
+    val notice_done = "notice_done"
+    val text_notification_done = "text_notification_done"
+    val notice_click = "notice_click"
 
     fun getAndroidID(context: Context): String {
         return Settings.System.getString(context.contentResolver, Settings.Secure.ANDROID_ID)
@@ -79,7 +83,7 @@ object EventReportU {
         }
     }
 
-    fun generalDataJson(context: Context): JSONObject {
+    private fun generalDataJson(context: Context): JSONObject {
         val json = JSONObject()
         //应用的版本
         json.put("nip", getVersionName(context))
@@ -281,13 +285,16 @@ object EventReportU {
     fun reportCustomEvent(eventName: String, bundle: Bundle? = null) {
         val genObj = generalDataJson(memoApp)
         genObj.put("eclipse", eventName)
-        if (bundle != null && bundle.getLong("time") != 0L) {
+        if (bundle != null) {
             val jsonObject = JSONObject()
-            jsonObject.put("time", bundle.getLong("time") / 1000)
-            genObj.put("coconut", jsonObject)
+            if (bundle.getLong("time") != 0L) {
+                jsonObject.put("time", bundle.getLong("time") / 1000)
+                genObj.put("coconut", jsonObject)
+            } else if (!bundle.getString("value").isNullOrBlank()) {
+                jsonObject.put("value", bundle.getString("value"))
+                genObj.put("coconut", jsonObject)
+            }
         }
         reportData(genObj.toString(), eventName = eventName)
     }
-
-
 }

@@ -64,8 +64,8 @@
 
         <androidx.appcompat.widget.AppCompatImageView
             android:id="@+id/item_select"
-            android:layout_width="35dp"
-            android:layout_height="35dp"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
             android:layout_marginStart="10dp"
             android:scaleType="centerInside"
             android:src="@mipmap/ic_select"

@@ -18,3 +18,4 @@ dependencyResolutionManagement {
 rootProject.name = "Easy Memo"
 include ':app'
 include ':are'
+include ':TimePickerDialog'

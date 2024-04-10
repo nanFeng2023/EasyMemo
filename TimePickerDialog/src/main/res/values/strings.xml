@@ -1,0 +1,5 @@
+<resources>
+    <string name="picker_sure">Confirm</string>
+    <string name="picker_cancel">Cancel</string>
+    <string name="picker_title">Select Time</string>
+</resources>

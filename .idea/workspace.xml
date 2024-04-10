@@ -15,6 +15,21 @@
           <theme>@style/Theme.Memo</theme>
         </config>
       </layout>
+      <layout url="file://$PROJECT_DIR$/TimePickerDialog/src/main/res/layout/timepicker_layout.xml">
+        <config>
+          <theme>@android:style/Theme.Material.Light</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/TimePickerDialog/src/main/res/layout/timepicker_line.xml">
+        <config>
+          <theme>@android:style/Theme.Material.Light</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/TimePickerDialog/src/main/res/layout/timepicker_toolbar.xml">
+        <config>
+          <theme>@android:style/Theme.Material.Light</theme>
+        </config>
+      </layout>
       <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/activity_appraise.xml">
         <config>
           <theme>@style/Theme.Memo</theme>
@@ -35,12 +50,17 @@
           <theme>@style/Theme.Memo</theme>
         </config>
       </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/activity_time_set.xml">
+        <config>
+          <theme>@style/Theme.Memo</theme>
+        </config>
+      </layout>
       <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_appraise.xml">
         <config>
           <theme>@style/Theme.Memo</theme>
         </config>
       </layout>
-      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_bottom_time.xml">
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_memo.xml">
         <config>
           <theme>@style/Theme.Memo</theme>
         </config>
@@ -81,66 +101,89 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1e87234e-1400-4b1f-84f4-be5df14f240c" name="Changes" comment="push1.0.0">
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/momo/builder/activity/AppraiseActivity.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/momo/builder/broadcast/NotifacationBroadcast.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/momo/builder/dialog/BottomAppraiseDialog.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/momo/builder/dialog/BottomTimeDialog.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/momo/builder/u/Constant.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/shape_round10.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/shape_round13.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/shape_round13_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/shape_round15.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/shape_round15_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/shape_round16.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/shape_round16_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/shape_round24.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/shape_round7.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/shape_round8.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_appraise.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_appraise.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_bottom_time.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-xxhdpi/ic_clock_icon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-xxhdpi/ic_close.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-xxhdpi/ic_edit_bg.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-xxhdpi/ic_emoj_appraise.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-xxhdpi/ic_emoj_dejected.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-xxhdpi/ic_emoj_happy.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-xxhdpi/ic_info.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-xxhdpi/ic_rate_bg1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-xxhdpi/ic_rate_bg2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-xxhdpi/ic_return_arr.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-xxhdpi/ic_select.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-xxhdpi/ic_selected.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-xxhdpi/ic_star_arrow.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-xxhdpi/ic_star_black.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-xxhdpi/ic_start_style1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-xxhdpi/ic_start_style2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-xxhdpi/ic_time_select_apply_bg.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-xxhdpi/ic_time_select_cancel_bg.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/values/dimens.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="1e87234e-1400-4b1f-84f4-be5df14f240c" name="Changes" comment="commit-v1.0.3">
+      <change afterPath="$PROJECT_DIR$/TimePickerDialog/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TimePickerDialog/bintray.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TimePickerDialog/build.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TimePickerDialog/proguard-rules.pro" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TimePickerDialog/src/androidTest/java/com/jzxiang/pickerview/ApplicationTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TimePickerDialog/src/main/AndroidManifest.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TimePickerDialog/src/main/java/com/jzxiang/pickerview/TimePickerDialog.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TimePickerDialog/src/main/java/com/jzxiang/pickerview/TimeWheel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TimePickerDialog/src/main/java/com/jzxiang/pickerview/adapters/AbstractWheelAdapter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TimePickerDialog/src/main/java/com/jzxiang/pickerview/adapters/AbstractWheelTextAdapter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TimePickerDialog/src/main/java/com/jzxiang/pickerview/adapters/ArrayWheelAdapter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TimePickerDialog/src/main/java/com/jzxiang/pickerview/adapters/NumericWheelAdapter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TimePickerDialog/src/main/java/com/jzxiang/pickerview/adapters/WheelViewAdapter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TimePickerDialog/src/main/java/com/jzxiang/pickerview/config/DefaultConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TimePickerDialog/src/main/java/com/jzxiang/pickerview/config/PickerConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TimePickerDialog/src/main/java/com/jzxiang/pickerview/data/Type.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TimePickerDialog/src/main/java/com/jzxiang/pickerview/data/WheelCalendar.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TimePickerDialog/src/main/java/com/jzxiang/pickerview/data/source/TimeDataSource.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TimePickerDialog/src/main/java/com/jzxiang/pickerview/data/source/TimeRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TimePickerDialog/src/main/java/com/jzxiang/pickerview/listener/OnDateSetListener.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TimePickerDialog/src/main/java/com/jzxiang/pickerview/utils/PickerContants.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TimePickerDialog/src/main/java/com/jzxiang/pickerview/utils/Utils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TimePickerDialog/src/main/java/com/jzxiang/pickerview/wheel/ItemsRange.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TimePickerDialog/src/main/java/com/jzxiang/pickerview/wheel/OnWheelChangedListener.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TimePickerDialog/src/main/java/com/jzxiang/pickerview/wheel/OnWheelClickedListener.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TimePickerDialog/src/main/java/com/jzxiang/pickerview/wheel/OnWheelScrollListener.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TimePickerDialog/src/main/java/com/jzxiang/pickerview/wheel/WheelRecycle.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TimePickerDialog/src/main/java/com/jzxiang/pickerview/wheel/WheelScroller.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TimePickerDialog/src/main/java/com/jzxiang/pickerview/wheel/WheelView.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TimePickerDialog/src/main/res/anim/slide_in_bottom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TimePickerDialog/src/main/res/anim/slide_out_bottom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TimePickerDialog/src/main/res/drawable/shape_round24.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TimePickerDialog/src/main/res/drawable/timepicker_divider_line.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TimePickerDialog/src/main/res/drawable/timepicker_sel_text_item.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TimePickerDialog/src/main/res/drawable/wheel_bg.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TimePickerDialog/src/main/res/drawable/wheel_val.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TimePickerDialog/src/main/res/layout/timepicker_layout.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TimePickerDialog/src/main/res/layout/timepicker_line.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TimePickerDialog/src/main/res/layout/timepicker_toolbar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TimePickerDialog/src/main/res/values/colors.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TimePickerDialog/src/main/res/values/dimens.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TimePickerDialog/src/main/res/values/strings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TimePickerDialog/src/main/res/values/style.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/momo/builder/activity/TimeSetActivity.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/momo/builder/broadcast/HomeEventBroadcast.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/momo/builder/broadcast/NotificationBroadcast.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/momo/builder/fragment/MemoFragment.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/momo/builder/u/AlarmU.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/momo/builder/u/BadgeUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/shape_round8_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_time_set.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_memo.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-xxhdpi/ic_lock_yellow.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/kotlinc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/kotlinc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/proguard-rules.pro" beforeDir="false" afterPath="$PROJECT_DIR$/app/proguard-rules.pro" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/momo/builder/MemoApp.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/momo/builder/MemoApp.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/momo/builder/activity/EditActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/momo/builder/activity/EditActivity.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/momo/builder/activity/LaunchActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/momo/builder/activity/LaunchActivity.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/momo/builder/activity/MemoListActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/momo/builder/activity/MemoListActivity.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/momo/builder/adapter/ColorAdapter.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/momo/builder/adapter/ColorAdapter.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/momo/builder/adapter/MemoListAdapter.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/momo/builder/adapter/MemoListAdapter.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/momo/builder/admob/ShowAd.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/momo/builder/admob/ShowAd.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/momo/builder/baseactivity/BaseViewBinding.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/momo/builder/baseactivity/BaseViewBinding.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/momo/builder/bean/MemoBean.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/momo/builder/bean/MemoBean.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/momo/builder/u/Ext.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/momo/builder/u/Ext.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/momo/builder/broadcast/NotifacationBroadcast.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/momo/builder/conf/FireConf.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/momo/builder/conf/FireConf.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/momo/builder/dialog/BottomTimeDialog.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/momo/builder/u/AppRegisterU.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/momo/builder/u/AppRegisterU.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/momo/builder/u/Constant.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/momo/builder/u/Constant.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/momo/builder/u/EventReportU.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/momo/builder/u/EventReportU.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/momo/builder/u/MemoU.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/momo/builder/u/MemoU.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/momo/builder/u/MmkvU.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/momo/builder/u/MmkvU.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_edit.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_edit.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_launch.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_launch.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_bottom_time.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/item_emeo.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/item_emeo.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/layout_memo_list_content.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/layout_memo_list_content.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/attrs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/attrs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/colors.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/colors.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/themes.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/themes.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-xxhdpi/ic_time_select_apply_bg.png" beforeDir="false" afterPath="$PROJECT_DIR$/TimePickerDialog/src/main/res/mipmap-xxhdpi/ic_time_select_apply_bg.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-xxhdpi/ic_time_select_cancel_bg.png" beforeDir="false" afterPath="$PROJECT_DIR$/TimePickerDialog/src/main/res/mipmap-xxhdpi/ic_time_select_cancel_bg.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/settings.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/settings.gradle" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -176,9 +219,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="resourceFile" />
         <option value="layoutResourceFile" />
         <option value="valueResourceFile" />
+        <option value="resourceFile" />
         <option value="Kotlin Class" />
       </list>
     </option>
@@ -226,6 +269,10 @@
     "android-custom-view/Users/xiehongsheng/.gradle/caches/modules-2/files-2.1/com.github.duanhong169/picker-view/1.0.0/fee2e38df2404c138e622d5e589be0d76156943c/picker-view-1.0.0-sources.jar!/top/defaults/view/PickerView.java_SELECTED": "PickerView",
     "android-custom-view/Users/xiehongsheng/.gradle/caches/modules-2/files-2.1/com.github.duanhong169/picker-view/1.0.0/fee2e38df2404c138e622d5e589be0d76156943c/picker-view-1.0.0-sources.jar!/top/defaults/view/PickerViewGroup.java_SELECTED": "PickerViewGroup",
     "android-custom-view/Users/xiehongsheng/.gradle/caches/modules-2/files-2.1/com.github.yijiebuyi/3DWheelPicker/v1.2.0/735ef1159cc859102c5cbfe3a72d4aebaf512c61/3DWheelPicker-v1.2.0-sources.jar!/com/wheelpicker/DateTimePicker.java_SELECTED": "DateTimePicker",
+    "android-custom-view/Users/xiehongsheng/.gradle/caches/modules-2/files-2.1/com.google.android.material/material/1.11.0/47456a5ab79e72baca757532823ea1fa08e001d3/material-1.11.0-sources.jar!/com/google/android/material/tabs/TabLayout.java_SELECTED": "TabLayout",
+    "android-custom-view/Users/xiehongsheng/AndroidStudioProjects/Memo/TimePickerDialog/src/main/java/com/jzxiang/pickerview/wheel/WheelView.java_SELECTED": "WheelView",
+    "android-custom-view/Users/xiehongsheng/AndroidStudioProjects/Memo/app/src/main/java/com/momo/builder/view/BadgeView.java_SELECTED": "BadgeView",
+    "android-custom-view/Users/xiehongsheng/AndroidStudioProjects/Memo/app/src/main/java/com/momo/builder/view/CusRecyclerView.kt_SELECTED": "CusRecyclerView",
     "android-custom-view/Users/xiehongsheng/AndroidStudioProjects/Memo/app/src/main/java/com/momo/builder/view/CustomPickerView.kt_SELECTED": "CustomPickerView",
     "android-custom-view/Users/xiehongsheng/AndroidStudioProjects/Memo/app/src/main/java/com/momo/builder/view/MemoSidebar.kt_SELECTED": "MemoSidebar",
     "android-custom-view/Users/xiehongsheng/AndroidStudioProjects/Memo/are/src/main/java/com/chinalwb/are/AREditText.java_SELECTED": "AREditText",
@@ -236,7 +283,7 @@
     "android-custom-view/Users/xiehongsheng/Library/Android/sdk/sources/android-34/android/widget/TextView.java_SELECTED": "TextView",
     "cf.first.check.clang-format": "false",
     "cidr.known.project.marker": "true",
-    "last_opened_file_path": "/Users/xiehongsheng/AndroidStudioProjects/Memo/app/src/main/res/drawable",
+    "last_opened_file_path": "/Users/xiehongsheng/AndroidStudioProjects/Memo/app",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.17",
     "project.structure.side.proportion": "0.2",
@@ -250,14 +297,20 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/app/src/main/res/drawable" />
+      <recent name="$PROJECT_DIR$/app" />
       <recent name="$PROJECT_DIR$/app/src/main/res/mipmap-xxhdpi" />
-      <recent name="$PROJECT_DIR$/app/src/main/res/layout" />
+      <recent name="$PROJECT_DIR$/app/src/main/res/drawable" />
+      <recent name="$PROJECT_DIR$/TimePickerDialog/src/main/res/drawable" />
+      <recent name="$PROJECT_DIR$/TimePickerDialog/src/main/res/mipmap-xxhdpi" />
     </key>
     <key name="android.template.599916980">
       <recent name="com.momo.builder.activity" />
     </key>
+    <key name="android.template.1584796201">
+      <recent name="com.momo.builder.activity" />
+    </key>
     <key name="CopyKotlinDeclarationDialog.RECENTS_KEY">
+      <recent name="com.momo.builder.activity" />
       <recent name="com.momo.builder.view" />
     </key>
   </component>

@@ -16,10 +16,10 @@ android {
 
     defaultConfig {
         applicationId "com.momo.builder"
-        minSdk 24
+        minSdk 26
         targetSdk 33
-        versionCode 4
-        versionName "1.0.3"
+        versionCode 5
+        versionName "1.0.4"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -56,6 +56,7 @@ dependencies {
     implementation 'androidx.work:work-runtime-ktx:2.7.1'
     implementation 'com.github.megatronking.stringfog:xor:4.0.1'
     implementation project(':are')
+    implementation project(':TimePickerDialog')
     implementation("com.tencent:mmkv:1.2.13")
     implementation(platform("com.google.firebase:firebase-bom:29.3.1"))
     implementation 'com.google.firebase:firebase-analytics-ktx'
@@ -64,7 +65,6 @@ dependencies {
     implementation 'com.google.firebase:firebase-config-ktx'
 
     implementation("com.google.android.gms:play-services-ads:22.2.0")
-    implementation "com.android.installreferrer:installreferrer:2.2"
     implementation("com.squareup.okhttp3:okhttp:4.12.0")
 
     implementation 'com.lzy.net:okgo:3.0.4'
@@ -75,4 +75,9 @@ dependencies {
     implementation("com.google.android.play:review:2.0.1")
     // For Kotlin users also import the Kotlin extensions library for Play In-App Review:
     implementation("com.google.android.play:review-ktx:2.0.1")
+
+    implementation 'com.adjust.sdk:adjust-android:4.33.5'
+    implementation 'com.android.installreferrer:installreferrer:2.2'
+    implementation 'com.google.android.gms:play-services-ads-identifier:18.0.1'
+    implementation 'com.google.android.gms:play-services-appset:16.0.2'
 }

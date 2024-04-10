@@ -88,14 +88,28 @@
         app:layout_constraintRight_toRightOf="@id/search_view"
         app:layout_constraintTop_toTopOf="@id/search_view" />
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rv_memo"
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/search_view"
+        app:tabGravity="center"
+        app:tabIndicatorColor="#1C259C"
+        app:tabMode="scrollable"
+        app:tabPaddingTop="4dp"
+        app:tabSelectedTextColor="#1C259C"
+        app:tabTextColor="#C7C7C7" />
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/viewPager"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_marginTop="5dp"
         android:layout_marginBottom="10dp"
-        app:layout_constraintBottom_toTopOf="@+id/icon_add"
-        app:layout_constraintTop_toBottomOf="@id/search_view" />
+        app:layout_constraintBottom_toTopOf="@+id/bottom"
+        app:layout_constraintTop_toBottomOf="@id/tabLayout" />
 
     <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/icon_add"
@@ -105,7 +119,7 @@
         android:layout_marginBottom="10dp"
         android:src="@drawable/icon_add"
         app:layout_constraintBottom_toTopOf="@+id/bottom"
-        app:layout_constraintRight_toRightOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <include
         android:id="@+id/bottom"

@@ -1,16 +1,25 @@
 package com.momo.builder
 
+import android.annotation.SuppressLint
 import android.app.Application
+import android.content.Intent
+import android.content.IntentFilter
 import android.os.Build
+import androidx.lifecycle.MutableLiveData
+import com.adjust.sdk.Adjust
+import com.adjust.sdk.AdjustConfig
+import com.adjust.sdk.LogLevel
 import com.android.installreferrer.api.InstallReferrerClient
 import com.android.installreferrer.api.InstallReferrerStateListener
 import com.google.android.gms.ads.MobileAds
 import com.google.android.gms.ads.identifier.AdvertisingIdClient
 import com.google.firebase.ktx.Firebase
 import com.google.firebase.ktx.initialize
+import com.momo.builder.broadcast.HomeEventBroadcast
 import com.tencent.mmkv.MMKV
 import com.momo.builder.conf.FireConf
 import com.momo.builder.u.AppRegisterU
+import com.momo.builder.u.Constant
 import com.momo.builder.u.MemoU
 import com.momo.builder.u.MmkvU
 import com.momo.builder.u.EventReportU
@@ -28,22 +37,40 @@ import java.io.IOException
 import java.util.Date
 
 lateinit var memoApp: MemoApp
+val message = MutableLiveData<String>()
 
 class MemoApp : Application() {
+
     override fun onCreate() {
         super.onCreate()
         memoApp = this
-        kotlin.runCatching {
-            Firebase.initialize(this)
-        }
+        Firebase.initialize(this)
         MobileAds.initialize(this)
         MMKV.initialize(this)
         AppRegisterU.register(this)
         MemoU.getLocalMemoList()
-        FireConf.getFireConf()
+        getFirebaseData()
         reqCloak()
         refererReq()
         adLimitTrack()
+        initAdjust()
+        registerHomeListener()
+    }
+
+    private fun getFirebaseData() {
+        kotlin.runCatching {
+            if (packageName == "com.easymemo.convenient.app") {
+                FireConf.getFireConf()
+            }
+        }
+    }
+
+    @SuppressLint("UnspecifiedRegisterReceiverFlag")
+    private fun registerHomeListener() {
+        val intentFilter = IntentFilter(Intent.ACTION_CLOSE_SYSTEM_DIALOGS)
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
+            registerReceiver(HomeEventBroadcast(), intentFilter, RECEIVER_NOT_EXPORTED)
+        } else registerReceiver(HomeEventBroadcast(), intentFilter)
     }
 
     private fun reqCloak() {
@@ -159,6 +186,27 @@ class MemoApp : Application() {
                 e.printStackTrace()
             }
         }
+    }
+
+    private fun initAdjust() {
+        val config = if (BuildConfig.DEBUG)
+            AdjustConfig(this, Constant.ADJUST_KEY, AdjustConfig.ENVIRONMENT_SANDBOX)
+        else AdjustConfig(this, Constant.ADJUST_KEY, AdjustConfig.ENVIRONMENT_PRODUCTION, true)
+        Adjust.addSessionCallbackParameter("customer_user_id", EventReportU.getAndroidID(this))
+//        config.setOnAttributionChangedListener {
+//            Log.d("----", "adjust network:${it.network}")
+//            if (MmkvU.getStr("user_adjust").isNotEmpty())
+//                return@setOnAttributionChangedListener
+//            val network = it.network
+//            if (network.isNotEmpty() && !network.contains("organic", ignoreCase = true)) {
+//                //买量用户,保存到本地
+//                MmkvU.saveStr("user_adjust", network)
+//                Log.d("----", "save adjust network")
+//            }
+//        }
+        config.setLogLevel(if (BuildConfig.DEBUG) LogLevel.DEBUG else LogLevel.SUPRESS)//设置日志级别 suppress禁用日志
+        config.setDelayStart(5.5)
+        Adjust.onCreate(config)
     }
 
 }

@@ -22,34 +22,34 @@ object MemoU {
                     jsonObject.optString("content"),
                     jsonObject.optString("labelColor"),
                     jsonObject.optLong("time"),
-                    jsonObject.optInt("type")
+                    jsonObject.optInt("type"),
                 )
                 memo.isDone = jsonObject.optBoolean("isDone")
+                memo.isNewCreate = jsonObject.optBoolean("isNewCreate")
+                memo.lockTime = jsonObject.optLong("lockTime")
+                memo.isLockOpen = jsonObject.optBoolean("isLockOpen")
+                memo.clockId = jsonObject.optInt("clockId")
+                memo.timeType = jsonObject.optInt("timeType")
                 list.add(memo)
             }
         }
         firstInitTwoMemo()
     }
 
-    fun saveMemo(
-        title: String,
-        htmlContent: String,
-        content: String,
-        labelColor: String,
-        type: Int
-    ) {
+    fun saveMemo(memoBean: MemoBean) {
         val clickIndex = getClickIndex()
         if (clickIndex >= 0) {
             val bean = list[clickIndex]
-            bean.title = title
-            bean.htmlContent = htmlContent
-            bean.content = content
-            bean.labelColor = labelColor
-            bean.type = type
+            bean.title = memoBean.title
+            bean.htmlContent = memoBean.htmlContent
+            bean.content = memoBean.content
+            bean.labelColor = memoBean.labelColor
+            bean.type = memoBean.type
+            bean.isDone = memoBean.isDone
+            bean.isNewCreate = memoBean.isNewCreate
+            bean.isLockOpen = memoBean.isLockOpen
+            bean.lockTime = memoBean.lockTime
         } else {
-            val memoBean =
-                MemoBean(title, htmlContent, content, labelColor, System.currentTimeMillis(), type)
-            memoBean.isNewCreate = true
             list.add(memoBean)
             clickMemo = memoBean
         }
@@ -57,9 +57,9 @@ object MemoU {
     }
 
     fun search(key: String): ArrayList<MemoBean> {
-        if (key.isEmpty()) {
-            return list
-        }
+//        if (key.isEmpty()) {
+//            return list
+//        }
         val searchList = arrayListOf<MemoBean>()
         list.forEach {
             if (it.title.lowercase(Locale.getDefault())
@@ -108,25 +108,29 @@ object MemoU {
         //"<html><body><p><span style=\"color:#575757;\">yggg</span></p></body></html>"
         list.add(
             MemoBean(
-                title = "1. Work List",
-                htmlContent = "<html><body><p><span style=\"color:#FFFFFF;\">Today ${obtainDate()}. Click the button on the right to finish.</span></p></body></html>",
+                title = "Work List",
+                htmlContent = "<html><body><p><span style=\"color:#333333;\">Today ${obtainDate()}. Click the button on the right to finish.</span></p></body></html>",
                 content = "Today ${obtainDate()}. Click the button on the right to finish.",
                 labelColor = "#F36E9D",
                 time = System.currentTimeMillis() + 100, type = 1
-            )
+            ).apply {
+                lockTime = System.currentTimeMillis()
+            }
         )
         list.add(
             MemoBean(
-                title = "2. User tutorial",
+                title = "User tutorial",
                 htmlContent = "<html><body><p><span style=\"color:#333333;\">Click in to change colors, record your life, and manage your to-do list</span></p></body></html>",
                 content = "Click in to change colors, record your life, and manage your to-do list",
                 labelColor = "#F3EDEF",
                 time = System.currentTimeMillis() + 200, type = 1
-            )
+            ).apply {
+                lockTime = System.currentTimeMillis()
+            }
         )
         list.add(
             MemoBean(
-                title = "3. Welcome to Easy Memo",
+                title = "Welcome to Easy Memo",
                 htmlContent = "<html><body><p><span style=\"color:#333333;\">This is an example text.You can delete it by clicking in it.</span></p></body></html>",
                 content = "This is an example text.You can delete it by clicking in it.",
                 labelColor = "#E6F2FF",

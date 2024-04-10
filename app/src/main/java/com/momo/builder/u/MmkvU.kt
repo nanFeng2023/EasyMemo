@@ -17,7 +17,7 @@ object MmkvU {
     const val GAID = "gaid"
 
     const val IS_APPRAISE = "isAppraise"
-
+    const val CLOCK_ID="clock_id"
     fun saveStr(key: String, value: String) {
         MMKV.defaultMMKV().encode(key, value)
     }
