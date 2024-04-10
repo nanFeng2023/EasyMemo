@@ -5,16 +5,6 @@
       <config />
     </shared>
     <layouts>
-      <layout url="file://$USER_HOME$/.gradle/caches/transforms-3/62c96ca9484b1ce7b19c75fcc62afc96/transformed/picker-view-1.0.0/res/layout/top_defaults_view_pickerview_dialog.xml">
-        <config>
-          <theme>@style/Theme.Memo</theme>
-        </config>
-      </layout>
-      <layout url="file://$USER_HOME$/.gradle/caches/transforms-3/faacfecf43e14b5695356ad721fa127f/transformed/material-1.11.0/res/layout/design_bottom_sheet_dialog.xml">
-        <config>
-          <theme>@style/Theme.Memo</theme>
-        </config>
-      </layout>
       <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/activity_appraise.xml">
         <config>
           <theme>@style/Theme.Memo</theme>
@@ -75,6 +65,11 @@
           <theme>@style/Theme.Memo</theme>
         </config>
       </layout>
+      <layout url="file://$USER_HOME$/.gradle/caches/transforms-3/faacfecf43e14b5695356ad721fa127f/transformed/material-1.11.0/res/layout/design_bottom_sheet_dialog.xml">
+        <config>
+          <theme>@style/Theme.Memo</theme>
+        </config>
+      </layout>
     </layouts>
   </component>
   <component name="AutoImportSettings">
@@ -82,65 +77,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1e87234e-1400-4b1f-84f4-be5df14f240c" name="Changes" comment="push1.0.0">
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/momo/builder/activity/AppraiseActivity.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/momo/builder/broadcast/NotifacationBroadcast.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/momo/builder/dialog/BottomAppraiseDialog.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/momo/builder/dialog/BottomTimeDialog.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/momo/builder/u/Constant.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/shape_round10.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/shape_round13.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/shape_round13_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/shape_round15.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/shape_round15_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/shape_round16.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/shape_round16_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/shape_round24.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/shape_round7.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/shape_round8.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_appraise.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_appraise.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_bottom_time.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-xxhdpi/ic_clock_icon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-xxhdpi/ic_close.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-xxhdpi/ic_edit_bg.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-xxhdpi/ic_emoj_appraise.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-xxhdpi/ic_emoj_dejected.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-xxhdpi/ic_emoj_happy.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-xxhdpi/ic_info.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-xxhdpi/ic_rate_bg1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-xxhdpi/ic_rate_bg2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-xxhdpi/ic_return_arr.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-xxhdpi/ic_select.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-xxhdpi/ic_selected.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-xxhdpi/ic_star_arrow.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-xxhdpi/ic_star_black.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-xxhdpi/ic_start_style1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-xxhdpi/ic_start_style2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-xxhdpi/ic_time_select_apply_bg.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-xxhdpi/ic_time_select_cancel_bg.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/values/dimens.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/google-services.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/momo/builder/activity/EditActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/momo/builder/activity/EditActivity.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/momo/builder/activity/LaunchActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/momo/builder/activity/LaunchActivity.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/momo/builder/activity/MemoListActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/momo/builder/activity/MemoListActivity.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/momo/builder/adapter/ColorAdapter.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/momo/builder/adapter/ColorAdapter.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/momo/builder/adapter/MemoListAdapter.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/momo/builder/adapter/MemoListAdapter.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/momo/builder/admob/ShowAd.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/momo/builder/admob/ShowAd.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/momo/builder/bean/MemoBean.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/momo/builder/bean/MemoBean.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/momo/builder/u/Ext.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/momo/builder/u/Ext.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/momo/builder/u/MemoU.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/momo/builder/u/MemoU.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/momo/builder/u/MmkvU.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/momo/builder/u/MmkvU.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_edit.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_edit.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_launch.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_launch.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/item_emeo.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/item_emeo.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/layout_memo_list_content.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/layout_memo_list_content.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/attrs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/attrs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/colors.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/colors.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/momo/builder/conf/LocalConf.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/momo/builder/conf/LocalConf.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/momo/builder/u/Constant.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/momo/builder/u/Constant.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/themes.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/themes.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/local.properties" beforeDir="false" afterPath="$PROJECT_DIR$/local.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -150,7 +94,7 @@
   <component name="ClangdSettings">
     <option name="formatViaClangd" value="false" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[hm6ttwmf7pfagyuw]" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[C:\Users\Administrator\.android\avd\Pixel_3a_API_34_extension_level_7_x86_64.avd]" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
@@ -161,12 +105,7 @@
       <state>
         <projects_view>
           <tree_state>
-            <expand>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="Memo" type="f1a62948:ProjectNode" />
-              </path>
-            </expand>
+            <expand />
             <select />
           </tree_state>
         </projects_view>
@@ -185,10 +124,9 @@
   </component>
   <component name="GenerateSignedApkSettings">
     <option name="EXPORT_PRIVATE_KEY" value="false" />
-    <option name="KEY_STORE_PATH" value="$USER_HOME$/test.jks" />
-    <option name="KEY_ALIAS" value="test" />
+    <option name="KEY_STORE_PATH" value="C:\Users\Administrator\easy.jks" />
+    <option name="KEY_ALIAS" value="easy" />
     <option name="REMEMBER_PASSWORDS" value="true" />
-    <option name="BUILD_TARGET_KEY" value="apk" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
@@ -209,12 +147,13 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "ApkExportedModule": "Easy_Memo.app",
-    "BundleExportedModule": "Memo.app",
+    "BundleExportedModule": "Easy_Memo.app",
     "DEBUGGABLE_DEVICE": "xiaomi-m2103k19pg-hm6ttwmf7pfagyuw",
     "DEBUGGABLE_PROCESS": "com.momo.builder",
     "DEBUGGER_ID": "Auto",
-    "ExportApk.ApkPathForEasy_Memo.app": "/Users/xiehongsheng/AndroidStudioProjects/Memo/app",
+    "ExportApk.ApkPathForEasy_Memo.app": "C:\\NewProject\\EasyMemo\\app",
     "ExportApk.ApkPathForMemo.app": "/Users/xiehongsheng/AndroidStudioProjects/Memo/app",
+    "ExportBundle.BundlePathForEasy_Memo.app": "C:\\NewProject\\EasyMemo\\app",
     "ExportBundle.BundlePathForMemo.app": "C:\\AndroidProject\\EasyMemo\\Memo\\app",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
@@ -236,7 +175,7 @@
     "android-custom-view/Users/xiehongsheng/Library/Android/sdk/sources/android-34/android/widget/TextView.java_SELECTED": "TextView",
     "cf.first.check.clang-format": "false",
     "cidr.known.project.marker": "true",
-    "last_opened_file_path": "/Users/xiehongsheng/AndroidStudioProjects/Memo/app/src/main/res/drawable",
+    "last_opened_file_path": "C:/NewProject/EasyMemo/app",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.17",
     "project.structure.side.proportion": "0.2",
@@ -250,6 +189,7 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\NewProject\EasyMemo\app" />
       <recent name="$PROJECT_DIR$/app/src/main/res/drawable" />
       <recent name="$PROJECT_DIR$/app/src/main/res/mipmap-xxhdpi" />
       <recent name="$PROJECT_DIR$/app/src/main/res/layout" />
@@ -262,6 +202,70 @@
     </key>
   </component>
   <component name="RunManager">
+    <configuration default="true" type="PythonConfigurationType" factoryName="Python">
+      <module name="Memo.app.unitTest" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="Tox" factoryName="Tox">
+      <module name="Memo.app.unitTest" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Autodetect">
+      <module name="Memo.app.unitTest" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Doctests">
+      <module name="Memo.app.unitTest" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <method v="2" />
+    </configuration>
     <configuration name="app" type="AndroidRunConfigurationType" factoryName="Android App">
       <module name="Easy_Memo.app.main" />
       <option name="DEPLOY" value="true" />
@@ -272,7 +276,6 @@
       <option name="ALL_USERS" value="false" />
       <option name="ALWAYS_INSTALL_WITH_PM" value="false" />
       <option name="CLEAR_APP_STORAGE" value="false" />
-      <option name="DYNAMIC_FEATURES_DISABLED_LIST" value="" />
       <option name="ACTIVITY_EXTRA_FLAGS" value="" />
       <option name="MODE" value="default_activity" />
       <option name="CLEAR_LOGCAT" value="false" />
@@ -341,70 +344,6 @@
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
-    </configuration>
-    <configuration default="true" type="PythonConfigurationType" factoryName="Python">
-      <module name="Memo.app.unitTest" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration default="true" type="Tox" factoryName="Tox">
-      <module name="Memo.app.unitTest" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <method v="2" />
-    </configuration>
-    <configuration default="true" type="tests" factoryName="Autodetect">
-      <module name="Memo.app.unitTest" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;&quot;" />
-      <option name="_new_targetType" value="&quot;PATH&quot;" />
-      <method v="2" />
-    </configuration>
-    <configuration default="true" type="tests" factoryName="Doctests">
-      <module name="Memo.app.unitTest" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="" />
-      <option name="CLASS_NAME" value="" />
-      <option name="METHOD_NAME" value="" />
-      <option name="FOLDER_NAME" value="" />
-      <option name="TEST_TYPE" value="TEST_SCRIPT" />
-      <option name="PATTERN" value="" />
-      <option name="USE_PATTERN" value="false" />
-      <method v="2" />
     </configuration>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />

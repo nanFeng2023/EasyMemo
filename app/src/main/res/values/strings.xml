@@ -1,5 +1,5 @@
 <resources>
     <string name="app_name">Easy Memo</string>
-    <string name="admob_id">ca-app-pub-3940256099942544~3347511713</string>
-    <string name="facebook_app_id" translatable="false"> </string>
+    <string name="admob_id">ca-app-pub-6964609723766026~8760067435</string>
+    <string name="facebook_app_id" translatable="false">687564233311266</string>
 </resources>
